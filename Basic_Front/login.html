@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Login</title>
     <link rel="stylesheet" href="./login.css" />
+    <script src="./login.js"></script>
   </head>
   <body>
     <h1>Login</h1>
@@ -17,14 +18,8 @@
         id="login_button"
         type="button"
         value="버튼"
-        onclick="alertIdValue()"
+        onclick="compareValiable()"
       />
     </form>
-    <script>
-      function alertIdValue() {
-        const Id = document.getElementById("txt_id");
-        alert(Id.value);
-      }
-    </script>
   </body>
 </html>
