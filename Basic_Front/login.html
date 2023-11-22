@@ -3,19 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <title>Login</title>
+    <style>
+      h1 {
+        color: tomato;
+        font-size: 25px;
+        text-align: center;
+      }
+      .login_inputs {
+        font-size: 25px;
+        border-radius: 10px;
+        border: 2px solid teal;
+        margin-bottom: 5px;
+      }
+      #login_button {
+        font-size: 20px;
+        width: 100px;
+        background-color: tomato;
+        border-radius: 5px;
+        border: none;
+      }
+    </style>
   </head>
   <body>
-    <h1 style="color: tomato; text-align: center">Login</h1>
+    <h1>Login</h1>
     <form>
-      ID: <input placeholder="ID" type="text" style="font-size: 25px" />
+      <input class="login_inputs" placeholder="ID" type="text" />
       <br />
-      PW: <input placeholder="PW" type="password" style="font-size: 25px" />
+      <input class="login_inputs" placeholder="PW" type="password" />
       <br />
-      <input
-        type="button"
-        value="버튼"
-        style="font-size: 25px; width: 100px; height: 30px"
-      />
+      <input id="login_button" type="button" value="버튼" />
     </form>
   </body>
 </html>
