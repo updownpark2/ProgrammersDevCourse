@@ -9,7 +9,7 @@
   <body>
     <h1>Login</h1>
     <form>
-      <input class="login_inputs" placeholder="ID" type="text" />
+      <input id="txt_id" class="login_inputs" placeholder="ID" type="text" />
       <br />
       <input class="login_inputs" placeholder="PW" type="password" />
       <br />
@@ -17,8 +17,14 @@
         id="login_button"
         type="button"
         value="버튼"
-        onclick="alert(`클릭됨`)"
+        onclick="alertIdValue()"
       />
     </form>
+    <script>
+      function alertIdValue() {
+        const Id = document.getElementById("txt_id");
+        alert(Id.value);
+      }
+    </script>
   </body>
 </html>
