@@ -1,0 +1,21 @@
+.title_box {
+  text-align: center;
+}
+.card_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.card_img {
+  width: 120px;
+  height: 120px;
+}
+.card_button {
+  font-size: 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+h1 {
+  text-align: center;
+}
