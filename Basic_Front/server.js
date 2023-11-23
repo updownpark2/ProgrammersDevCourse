@@ -7,17 +7,16 @@ let url = require("url");
 
 function start(route, handle) {
   function onRequest(request, response) {
-    let pathname = url.parse(request.url, true).pathname;
-    // parse는 문자열을 catch
-    route(pathname, handle);
+    let pathname = url.parse(request.url).pathname;
 
-    //응답, 요청을 각각 알아서 node.js가 넣어준다
-    response.writeHead(200, { "Content-Type": "text/html" });
-    // Head를 적겠다. 200 , 내가 너에게 줄 resonse의 타입은 html이다.
-    response.write(`Hello Node.js`);
-    // Body를 적겠다. 그 안에 들어갈 데이터는 Hello Node.js
-    response.end();
-    // 이제 담을거 끝났어
+    // parse는 문자열을 catch
+    if (pathname === "/favicon.ico") {
+      // favicon.ico 요청에 대한 응답 처리
+      response.writeHead(200, { "Content-Type": "image/x-icon" });
+      response.end();
+      return;
+    }
+    route(pathname, handle, response);
   }
   // onRequest => client한테 요청이오면~~
 

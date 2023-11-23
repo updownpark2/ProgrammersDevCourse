@@ -1,5 +1,12 @@
-function route(pathname, handle) {
-  handle[pathname]();
+function route(pathname, handle, response) {
+  if (typeof handle[pathname] === `function`) {
+    handle[pathname](response);
+  } else if (typeof handle[pathname] !== `function`) {
+    response.writeHead(404, { "Content-Type": "text/html" });
+    response.write("Not Found");
+    response.end();
+  }
+
   // 아하 pathname => 포트번호 뒤에 오는아이구나
 }
 
