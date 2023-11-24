@@ -1,4 +1,4 @@
-function route(res, pathname, handle) {
+function route(pathname, handle, res) {
   handle[pathname](res);
 }
 exports.route = route;
